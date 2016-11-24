@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<bank>
+<question id="1" question="我婆婆或岳母的名字叫什么？" ></question>
+<question id="2" question="我爸爸的出生地在哪里？" ></question>
+<question id="3" question="我妈妈的出生地在哪里？" ></question>
+<question id="4" question="我的小学校名是什么？" ></question>
+<question id="5" question="我的中学校名是什么？" ></question>
+<question id="6" question="我的一个好朋友的手机号码是什么？" ></question>
+<question id="7" question="我的一个好朋友的爸爸名字是什么？" ></question>
+</bank>

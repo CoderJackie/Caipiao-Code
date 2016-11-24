@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<bank>
+<row id="1" bankname="中国工商银行" ></row>
+<row id="2" bankname="中国农业银行" ></row>
+<row id="3" bankname="中国银行" ></row>
+<row id="4" bankname="中国建设银行" ></row>
+<row id="5" bankname="交通银行" ></row>
+<row id="6" bankname="中国民生银行" ></row>
+<row id="7" bankname="中信银行" ></row>
+<row id="8" bankname="招商银行" ></row>
+<row id="9" bankname="上海浦东发展银行" ></row>
+<row id="10" bankname="深圳发展银行" ></row>
+<row id="11" bankname="中国光大银行" ></row>
+<row id="12" bankname="广东发展银行" ></row>
+<row id="13" bankname="华夏银行" ></row>
+<row id="14" bankname="花旗银行" ></row>
+<row id="15" bankname="汇丰银行" ></row>
+</bank>

@@ -1,0 +1,25 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "d1022508-ffcf-d646-a457-168adc156b4a++7568",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+    "d1022508-ffcf-d646-a457-168adc156b4a++7568" : {
+
+    }
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "d1022508-ffcf-d646-a457-168adc156b4a++7568" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "D8FD25DA-778C-4A19-ACB4-602A27A5B425",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "d1022508-ffcf-d646-a457-168adc156b4a++7568" : "%E6%B5%99%E6%B1%9F%E6%9D%AD%E5%B7%9E\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "TicketProject",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Zhejianghangzhou\/TicketProject.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "http:\/\/svn.products.shovesoft.com:443\/svn\/SLS",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Subversion",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "d1022508-ffcf-d646-a457-168adc156b4a++7568"
+    }
+  ]
+}

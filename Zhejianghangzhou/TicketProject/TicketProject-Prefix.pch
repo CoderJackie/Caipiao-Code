@@ -1,0 +1,150 @@
+
+// Prefix header for all source files of the 'TicketProject' target in the 'TicketProject' project
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_3_0
+#warning "This project uses features only available in iOS SDK 3.0 and later."
+#endif
+
+//如果不需要经常去改变的类，且应用广泛的可以在下面添加为所有的头文件
+#ifdef __OBJC__
+    #import "SVProgressHUD.h"
+    #import <Foundation/Foundation.h>
+    #import <AudioToolbox/AudioToolbox.h>
+    #import "Config.h"
+    #import "AppDelegate.h"
+    #import "PullToRefreshTableView.h"
+    #import "PullingRefreshTableView.h"
+    #import "Service.h"
+    #import "CustomLabel.h"
+    #import "CustomAlertView.h"
+    #import "JSONKit.h"
+    #import "MarkupParser.h"
+    #import "XYMPromptView.h"
+    #import "XYMKeyChain.h"
+    #import "MyAppDelegate.h"
+    #import "UIImage+Color.h"
+    #import "ASIFormDataRequest.h"
+    #import "ASIHTTPRequestDelegate.h"
+    #import "NSDictionary+custom.h"
+    #import "NSURL+kCustomUrl.h"
+    #import "Header.h"
+    #import "UIView+Helper.h"
+    #import "HelpViewController.h"
+    #import "XFNavigationViewController.h"
+    #import "NSObject+addFunctions.h"
+    #import "NSArray+doSomeThings.h"
+    #import "NSDictionary+doSomeThings.h"
+#endif
+
+#define kLoginOnceOnHomeView @"loginOnceThisView"           // 23代表只登录一次,其余不登录
+#define kEnterpriseCertificateString @"enterprise"          //企业证书类型
+#define kCompanyCertificateString @"company"                //公司证书类型
+#define kPersonCertificateString @"person"                  //个人证书类型
+
+// 应用程序托管
+#define AppDelegateInstance	                        ((AppDelegate*)([UIApplication sharedApplication].delegate))
+#define kScreenSize [UIScreen mainScreen].bounds.size
+#define kWinSize [UIScreen mainScreen].applicationFrame.size  //应用的宽度,除去状态栏
+#define kBottomHeight (IS_PHONE ? 44 : 64)   //购彩大厅内彩种购彩子界面的底部高度
+#define kTabBarHeight (IS_PHONE ? 50 : 69)   //开始各选项卡模块底部的高度
+#define kHeadViewHeight 30  //headView的高度
+#define kNavigationBarHeight 44  //导航栏竖屏时的高度 这里没有进行设置，你修改也没用 只能作为默认常量
+
+#define bYellowColor [UIColor colorWithRed:0xfc/255.0 green:0xe3/255.0 blue:0xbc/255.0 alpha:1.0]
+#define bGreenColor [UIColor colorWithRed:0xcd/255.0 green:0xf9/255.0 blue:0xd8/255.0 alpha:1.0]
+#define bRedColor [UIColor colorWithRed:0xfd/255.0 green:0xcd/255.0 blue:0xcd/255.0 alpha:1.0]
+#define bBlueColor [UIColor colorWithRed:0xcd/255.0 green:0xe0/255.0 blue:0xff/255.0 alpha:1.0]
+#define bPurpleColor [UIColor colorWithRed:0xeb/255.0 green:0xcb/255.0 blue:0xfd/255.0 alpha:1.0]
+
+#define tYellowColor [UIColor colorWithRed:0xb1/255.0 green:0x70/255.0 blue:0x0c/255.0 alpha:1.0]
+#define tGreenColor [UIColor colorWithRed:0x0d/255.0 green:0x99/255.0 blue:0x30/255.0 alpha:1.0]
+#define tRedColor [UIColor colorWithRed:0xd4/255.0 green:0x0d/255.0 blue:0x0d/255.0 alpha:1.0]
+#define tBlueColor [UIColor colorWithRed:0x0d/255.0 green:0x52/255.0 blue:0xc3/255.0 alpha:1.0]
+#define tPurpleColor [UIColor colorWithRed:0x8d/255.0 green:0x11/255.0 blue:0xd2/255.0 alpha:1.0]
+
+#define tRedColorText @"e3393c"
+#define tBlueColorText @"2f85e6"
+
+#define kBackgroundColor [UIColor colorWithRed:0xf6/255.0 green:0xf6/255.0 blue:0xf6/255.0 alpha:1.0]
+#define kRedColor [UIColor colorWithRed:0xe3/255.0 green:0x39/255.0 blue:0x3c/255.0 alpha:1.0]
+#define kGreenColor [UIColor colorWithRed:0x0d/255.0 green:0x99/255.0 blue:0x30/255.0 alpha:1.0]
+#define kDarkGrayColor [UIColor colorWithRed:0x65/255.0 green:0x65/255.0 blue:0x65/255.0 alpha:1.0]
+#define kGrayColor [UIColor colorWithRed:0x88/255.0 green:0x84/255.0 blue:0x74/255.0 alpha:1.0]
+#define kLightGrayColor [UIColor colorWithRed:0xe2/255.0 green:0xe2/255.0 blue:0xe2/255.0 alpha:1.0]
+#define kBlueColor [UIColor colorWithRed:0x2f/255.0 green:0x85/255.0 blue:0xe6/255.0 alpha:1.0]
+#define kYellowColor [UIColor colorWithRed:0xfd/255.0 green:0xae/255.0 blue:0x24/255.0 alpha:1.0]
+
+#define IS_IOS7 ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0000 ? YES : NO)
+#define IS_IOS8 ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0000 ? YES : NO)
+#define IS_PHONE (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
+#define IPAD_PROPORTION (CGRectGetWidth([[UIScreen mainScreen] applicationFrame]) / 768.0f)
+#define IOS_VERSION [[[UIDevice currentDevice] systemVersion] floatValue]
+#define IncreaseNavY (IOS_VERSION >= 7.0000 ? 64 : 0)
+#define IncreaseNavHeight (IOS_VERSION >= 7.0000 ? 64 : 44)
+
+#define IS_3_Inch (kScreenSize.height == 480 ? YES : NO)
+#define IS_4_Inch (kScreenSize.height == 568 ? YES : NO)
+#define IS_5_Inch (kScreenSize.height == 667 ? YES : NO)
+#define IS_6_Inch (kScreenSize.height == 736 ? YES : NO)
+
+// 十六进制->十进制
+#define kUIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
+#define kRGBColor(r, g, b)     [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:1.0]
+#define kRGBAColor(r, g, b, a) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a]
+#define kBACKGROUND_COLOR [UIColor colorWithRed:242.0/255.0 green:236.0/255.0 blue:231.0/255.0 alpha:1.0]// 背景色
+#define kCLEAR_COLOR [UIColor clearColor]// 清除颜色
+
+//震动
+#define ISSHAKE if([UserInfo shareUserInfo].isOn == 1){AudioServicesPlaySystemSound (kSystemSoundID_Vibrate);}
+
+#define IsSupportShaking if([[[[NSUserDefaults standardUserDefaults] objectForKey:kDefaultSettings] objectForKey:kIsShakeToSelect] integerValue] == 1){return YES;}
+
+#define kDefaultSettings @"defaultSettings"
+#define kIsShake         @"isShake"
+#define kIsShakeToSelect @"isShakeToSelect"
+#define UPURL            @"http://www.baidu.com"
+#define kIsStorePassword @"isStorePassword"
+#define kUsername        @"username"
+
+#define kAppHttpKey @"5nP93yBQIGZDHbVCoWceFO5" //用于加密的字段，暂未使用
+
+#define kAppKey @"DX45hdNkur8rE665CrjLp4kJLd837WRQ"         // 正式站点、演示站点
+
+
+/************************************* 以下部分在外包的时候需要为客户重新设置  *************************************/
+
+#define kWebSite @"http://www.sanyi365.com"
+//#define kWebSite @"http://zjzxs.test.shovesoft.net"
+
+#define kBaseUrl [NSString stringWithFormat:@"%@/Ajax/AppGateway.ashx",kWebSite]
+
+#define kAlipayRechargeUrl [NSString stringWithFormat:@"%@/Home/Room/OnlinePay/AlipayApp/Trade.aspx",kWebSite]  //支付宝充值
+#define kUPPayPluginRechargeUrl [NSString stringWithFormat:@"%@/Home/Room/OnlinePay/YLAPP/purchase.aspx",kWebSite] //银联充值
+
+//该app的Scheme 在TicketProject-Info.plist也需要修改
+#define kApplicationScheme @"xiaofencaipiao5.3.13"//<----------这东西记得这里改，和在plist的Scheme中也改
+
+
+//分享到各平台所需申请AppID 在TicketProject-Info.plist也需要修改        分享的平台id需要用户自己重新取申请
+#define FenXiangName @"晓风软件" //分享软件名，彩票是屏蔽词汇，在部分分享接口被禁，安卓的没被禁止
+#define UMAPPKEY @"52478ab556240b0c130d6760"   //友盟Appid
+#define WXAPPKEY @"wxd930ea5d5a258f4f"//@"wx3cbc6760e4c91bca" //微信
+#define WXAPPKEYSECRET @"db426a9829e4b49a0dcac7b4162da6b6" //微信秘密Appid
+#define QQAPPID  @"100424468"    //QQ互联appId
+#define TENCENTAPPKEY @"c7394704798a158208a74ab60104f0ba"        //qq应用appkey
+
+//测试时用NO（此时购彩可连续点击，可能出现获取失败的情况）
+#define kToDeliverySoftware YES//是否在正式环境上，因为经常偷懒忘记，所以干脆一起在这里设置，打开隐藏更新开关，交付给客户的时候要打开用YES，尤其是上appstore的
+
+#warning 记得确认证书类型
+//为客户设置的证书类型
+#define kCurrentCertificatetType kEnterpriseCertificateString //自动更新需要用到分辨证书类型（企业具备更新功能，个人和公司的appstore负责）  kEnterpriseCertificateString 企业 kCompanyCertificateString公司  kPersonCertificateString个人
+
+
+
+
+
+

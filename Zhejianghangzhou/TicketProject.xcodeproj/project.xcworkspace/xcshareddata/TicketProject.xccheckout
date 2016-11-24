@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>D8FD25DA-778C-4A19-ACB4-602A27A5B425</string>
+	<key>IDESourceControlProjectName</key>
+	<string>TicketProject</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>faeb8f7c-d8d2-5240-9812-4dca282f4211++3236</key>
+		<string>http://dev.shovesoft.com:8443/svn/Product_SLS5/APP/iOS/trunk/main</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>TicketProject.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>faeb8f7c-d8d2-5240-9812-4dca282f4211++3236</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectRepositoryRootDictionary</key>
+	<dict>
+		<key>faeb8f7c-d8d2-5240-9812-4dca282f4211++3236</key>
+		<string>http://dev.shovesoft.com:8443/svn/Product_SLS5</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>http://dev.shovesoft.com:8443/svn/Product_SLS5/APP/iOS/trunk/main/TicketProject.xcodeproj</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>faeb8f7c-d8d2-5240-9812-4dca282f4211++3236</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.subversion</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>faeb8f7c-d8d2-5240-9812-4dca282f4211++3236</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Product_SLS5</string>
+		</dict>
+	</array>
+</dict>
+</plist>
